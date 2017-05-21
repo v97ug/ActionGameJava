@@ -4,10 +4,7 @@
 //
 
 public class PointGet {
-	int coin = 0;
-
-	public PointGet() {
-	}
+	private int coin = 0;
 
 	public void initCoin() {
 		this.coin = 0;

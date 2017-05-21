@@ -1,7 +1,9 @@
-//
+package Thing;//
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+
+import Thing.MoveThing;
 
 import java.awt.Color;
 import java.util.ArrayList;
@@ -51,7 +53,7 @@ public class Enemy extends MoveThing {
 			while(i < this.fires.size()) {
 				Bullet aFire = (Bullet)this.fires.get(i);
 				aFire.move(Math.cos(aFire.getAngle()), Math.sin(aFire.getAngle()));
-				if(aFire.getX() - (double)aFire.getL() > 0.0D && aFire.getX() < (double)Num.MAX_WIDTH && aFire.getY() < (double)Num.MAX_HEIGHT && aFire.getY() - (double)aFire.getL() >= 0.0D) {
+				if(aFire.getX() - (double)aFire.getL() > 0.0D && aFire.getX() < (double) Num.MAX_WIDTH && aFire.getY() < (double) Num.MAX_HEIGHT && aFire.getY() - (double)aFire.getL() >= 0.0D) {
 					++i;
 				} else {
 					this.fires.remove(aFire);
@@ -124,7 +126,7 @@ public class Enemy extends MoveThing {
 		while(i < this.needles.size()) {
 			MoveNeedle aNeedle = (MoveNeedle)this.needles.get(i);
 			aNeedle.gravity();
-			if(aNeedle.getY() >= (double)Num.MAX_HEIGHT) {
+			if(aNeedle.getY() >= (double) Num.MAX_HEIGHT) {
 				this.needles.remove(aNeedle);
 			} else {
 				++i;

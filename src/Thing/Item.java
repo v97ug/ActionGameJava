@@ -1,24 +1,26 @@
-//
+package Thing;//
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+
+import Thing.Thing;
 
 import java.awt.Color;
 import java.io.File;
 import javax.imageio.ImageIO;
 
-public class Needle extends Thing {
+public class Item extends Thing {
 	final Color color;
 
-	public Needle(double x, double y, int length) {
+	public Item(double x, double y, int length) {
 		super(x, y, length);
-		this.color = Color.red;
+		this.color = Color.blue;
 		super.setColor(this.color);
 
 		try {
-			this.image = ImageIO.read(new File("img/needle.png"));
-		} catch (Exception var7) {
-			var7.printStackTrace();
+			this.image = ImageIO.read(new File("img/item.png"));
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 
 	}

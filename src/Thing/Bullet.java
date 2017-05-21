@@ -3,6 +3,8 @@
 // (powered by Fernflower decompiler)
 //
 
+package Thing;
+
 import java.awt.Color;
 
 public class Bullet extends MoveThing {

@@ -1,7 +1,9 @@
-//
+package Thing;//
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+
+import Thing.Thing;
 
 import java.awt.Color;
 

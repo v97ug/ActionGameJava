@@ -1,0 +1,5 @@
+.idea/
+*.iml
+src/META-INF/
+out/*
+!out/artifacts/ActionGame2_jar/ActionGame2.jar

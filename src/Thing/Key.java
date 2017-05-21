@@ -1,4 +1,4 @@
-//
+package Thing;//
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
@@ -7,11 +7,11 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Key implements KeyListener {
-	static boolean up = false;
-	static boolean down = false;
-	static boolean right = false;
-	static boolean left = false;
-	static boolean enter = false;
+	public static boolean up = false;
+	public static boolean down = false;
+	public static boolean right = false;
+	public static boolean left = false;
+	public static boolean enter = false;
 	static boolean attack = false;
 	static boolean jump = false;
 

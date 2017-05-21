@@ -1,7 +1,9 @@
-//
+package Thing;//
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+
+import Thing.MoveThing;
 
 import java.awt.Color;
 import java.io.File;
@@ -14,14 +16,14 @@ public class MoveNeedle extends MoveThing {
 
 	public MoveNeedle(double x, double y, int length) {
 		super(x, y, length);
-		this.color = Color.red;
-		this.speed = 3;
-		this.appear = false;
+		color = Color.red;
+		speed = 3;
+		appear = false;
 		super.setSpeed(3);
 		super.setColor(this.color);
 
 		try {
-			this.image = ImageIO.read(new File("img/fallNeedle.png"));
+			image = ImageIO.read(new File("img/fallNeedle.png"));
 		} catch (Exception var7) {
 			var7.printStackTrace();
 		}
@@ -29,10 +31,10 @@ public class MoveNeedle extends MoveThing {
 	}
 
 	public void changeAppear() {
-		this.appear = !this.appear;
+		appear = !appear;
 	}
 
 	public boolean getAppear() {
-		return this.appear;
+		return appear;
 	}
 }
