@@ -1,0 +1,12 @@
+# ActionGameJava
+
+JavaのSwingで、横スクロールゲームを作ってみました。
+
+![result](game-stage.png)
+
+## 操作方法
+|キー|説明|
+|:---:|:---:|
+|z|決定 and ジャンプ|
+|Enter|決定|
+|space|決定 and ジャンプ|
