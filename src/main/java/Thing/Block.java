@@ -3,11 +3,8 @@ package Thing;//
 // (powered by Fernflower decompiler)
 //
 
-import Thing.Thing;
-
 import java.awt.Color;
-import java.awt.Image;
-import java.io.File;
+import java.io.InputStream;
 import javax.imageio.ImageIO;
 
 public class Block extends Thing {
@@ -19,7 +16,8 @@ public class Block extends Thing {
 		super.setColor(this.color);
 
 		try {
-			this.image = ImageIO.read(new File("img/Block.png"));
+            InputStream resourceInputStream = getClass().getClassLoader().getResourceAsStream("img/Block.png");
+            this.image = ImageIO.read(resourceInputStream);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
