@@ -3,10 +3,8 @@ package Thing;//
 // (powered by Fernflower decompiler)
 //
 
-import Thing.Thing;
-
 import java.awt.Color;
-import java.io.File;
+import java.io.InputStream;
 import javax.imageio.ImageIO;
 
 public class Needle extends Thing {
@@ -18,7 +16,8 @@ public class Needle extends Thing {
 		super.setColor(this.color);
 
 		try {
-			this.image = ImageIO.read(new File("img/needle.png"));
+            InputStream resourceInputStream = getClass().getClassLoader().getResourceAsStream("img/needle.png");
+            this.image = ImageIO.read(resourceInputStream);
 		} catch (Exception var7) {
 			var7.printStackTrace();
 		}

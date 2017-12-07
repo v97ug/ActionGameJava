@@ -2,10 +2,7 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 import Thing.MoveNeedle;
@@ -39,7 +36,9 @@ public class MyDrawPanel extends JPanel {
 
     public void game() {
         try {
-            skyImage = ImageIO.read(new File("img/sky.png"));
+
+            InputStream resourceInputStream = getClass().getClassLoader().getResourceAsStream("img/sky.png");
+            skyImage = ImageIO.read(resourceInputStream);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -246,8 +245,8 @@ public class MyDrawPanel extends JPanel {
 
     public void makeStage1() {
         try {
-            File file2 = new File("stage/stage1_150x20.pgm");
-            BufferedReader br = new BufferedReader(new FileReader(file2));
+            InputStream resourceInputStream = getClass().getClassLoader().getResourceAsStream("stage/stage1_150x20.pgm");
+            BufferedReader br = new BufferedReader(new InputStreamReader(resourceInputStream));
 
             br.readLine();
             br.readLine();
