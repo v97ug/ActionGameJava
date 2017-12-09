@@ -1,4 +1,8 @@
-.idea/
+/.idea
+/project/target
+/project/project
+/target
+
 *.iml
 src/META-INF/
 out/*
